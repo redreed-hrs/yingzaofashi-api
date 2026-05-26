@@ -12,7 +12,7 @@ public class Heritage {
     private Long id;
     private String name;
     private String period;
-    private String type;               // 新增：建筑类型（古遗址/古墓葬/古建筑/石窟寺及石刻等）
+    private String type;
     @Column(name = "period_code")
     private Integer periodCode;
     private String province;
@@ -20,4 +20,7 @@ public class Heritage {
     private String county;
     private Double longitude;
     private Double latitude;
+
+    @Column(name = "batch")
+    private String batch;      // 新增：保护批次（如“第一批全国重点文物保护单位”）
 }

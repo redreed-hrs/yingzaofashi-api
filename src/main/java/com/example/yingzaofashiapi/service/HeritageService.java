@@ -73,15 +73,9 @@ public class HeritageService {
     // 将 Heritage 实体转换为 HeritagePointDTO（使用8参数构造器）
     private HeritagePointDTO convertToDTO(Heritage h) {
         return new HeritagePointDTO(
-                h.getId(),
-                h.getName(),
-                h.getPeriod(),
-                h.getType(),          // 新增 type
-                h.getProvince(),
-                h.getLongitude(),
-                h.getLatitude(),
-                -1,
-                null
+                h.getId(), h.getName(), h.getPeriod(), h.getType(), h.getProvince(),
+                h.getLongitude(), h.getLatitude(), -1, null,
+                h.getBatch()  // 新增，需要在 Heritage 实体中添加 batch 字段
         );
     }
 }
